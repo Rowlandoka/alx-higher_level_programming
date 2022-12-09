@@ -5,4 +5,3 @@ def square_matrix_simple(matrix=[]):
         result = list(map(lambda x: x**2, col))
         squareMatrix.append(result)
     return squareMatrix
-   
