@@ -12,5 +12,5 @@ def list_division(my_list_1, my_list_2, list_length):
         except ZeroDivisionError:
             print("{}".format("division by 0"))
         finally:
-            newList.append(result or 0)
+            newList.append(result)
     return(newList)
