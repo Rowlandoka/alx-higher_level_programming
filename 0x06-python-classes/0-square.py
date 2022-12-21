@@ -2,5 +2,5 @@
 class Square:
     pass
     """
-    A create square class object
+    creates a square class object
     """
