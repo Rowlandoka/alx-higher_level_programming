@@ -4,4 +4,3 @@ class Square:
     """
     A create square class object
     """
-    
