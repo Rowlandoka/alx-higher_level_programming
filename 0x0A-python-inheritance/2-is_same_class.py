@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Isinstance of a class """
+"""Isinstance of a class"""
 
 
 def is_same_class(obj, a_class):
