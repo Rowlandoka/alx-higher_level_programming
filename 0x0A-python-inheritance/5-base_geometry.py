@@ -1,9 +1,9 @@
-#!/usr/bin/bash/python3
-""" Model a class BaseGeometry """
+#!/usr/bin/python3
+"""basegeometryclass"""
 
 
 class BaseGeometry:
     """instance of geometry class"""
     def __init__(self):
-        """ Initialise a clas"""
+        """initialize class"""
         pass
