@@ -3,5 +3,7 @@
 
 
 class BaseGeometry:
-    """Initialise an empty class"""
-    pass
+    """instance of geometry class"""
+    def __init__(self):
+        """ Initialise a clas"""
+        pass
