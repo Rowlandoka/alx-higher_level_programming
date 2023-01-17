@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""class base"""
+"""Define a base class model."""
 import json
 import os.path
+import turtle
 
 
 class Base:
@@ -85,3 +86,43 @@ class Base:
                         except Exception:
                             pass
             return [cls.create(**dic) for dic in csvs]
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Draw Rectangles and Squares using the turtle module.
+        Args:
+            list_rectangles (list): A list of Rectangle objects to draw.
+            list_squares (list): A list of Square objects to draw.
+        """
+        turlt = turtle.Turtle()
+        turlt.screen.bgcolor("#b7312c")
+        turlt.pensize(3)
+        turlt.shape("turtle")
+
+        turlt.color("#ffffff")
+        for rect in list_rectangles:
+            turlt.showturtle()
+            turlt.up()
+            turlt.goto(rect.x, rect.y)
+            turlt.down()
+            for i in range(2):
+                turlt.forward(rect.width)
+                turlt.left(90)
+                turlt.forward(rect.height)
+                turlt.left(90)
+            turlt.hideturtle()
+
+        turlt.color("#b5e3d8")
+        for square in list_squares:
+            turlt.showturtle()
+            turlt.up()
+            turlt.goto(square.x, square.y)
+            turlt.down()
+            for i in range(2):
+                turlt.forward(square.width)
+                turlt.left(90)
+                turlt.forward(square.height)
+                turlt.left(90)
+            turlt.hideturtle()
+
+        turtle.exitonclick()
