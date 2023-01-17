@@ -75,3 +75,8 @@ class Rectangle(Base):
         print('\n' * self.y, end="")
         print(''.join(' ' * self.x + '#' * self.width + '\n'
                       for times in range(self.height)), end="")
+    
+    def __str__(self):
+        """Override the to string method"""
+        return "[{}] ({}) {}/({} - {}/{}".format(
+            type(self).__name__, self.id, self.x, self.y, self.width, self.height)
