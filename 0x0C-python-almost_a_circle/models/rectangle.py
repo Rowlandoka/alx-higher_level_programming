@@ -75,7 +75,7 @@ class Rectangle(Base):
         print('\n' * self.y, end="")
         print(''.join(' ' * self.x + '#' * self.width + '\n'
                       for times in range(self.height)), end="")
-    
+
     def __str__(self):
         """gets rectangle"""
         return "[{}] ({}) {}/{} - {}/{}".format(
