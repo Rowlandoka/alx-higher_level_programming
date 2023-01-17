@@ -13,6 +13,15 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
+    def validator(self, name, value):
+        """validates the shit out of it"""
+        if not isinstance(value, int):
+            raise TypeError("{} must be an integer".format(name))
+        if (name is 'width' or name is 'height') and value <= 0:
+            raise ValueError("{} must be > 0".format(name))
+        if (name is 'x' or name is 'y') and value < 0:
+            raise ValueError("{} must be >= 0".format(name))
+
     @property
     def width(self):
         """ get widths"""
@@ -36,19 +45,23 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """set the height"""
+        self.validator("height", value)
         self.__height = value
 
     @width.setter
     def width(self, value):
         """ Set the width"""
+        self.validator("width", value)
         self.__width = value
 
     @x.setter
     def x(self, value):
         """ Set x """
+        self.validator("x", value)
         self.__x = value
 
     @y.setter
     def y(self, value):
         """ Set the value of y."""
+        self.validator("y", value)
         self.__y = value
