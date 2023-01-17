@@ -22,12 +22,12 @@ class Rectangle(Base):
     def height(self):
         """get the height"""
         return self.__height
-    
+
     @property
     def x(self):
         """Get x"""
         return self.__x
-    
+
     @property
     def y(self):
         """ Get y """
@@ -52,5 +52,3 @@ class Rectangle(Base):
     def y(self, value):
         """ Set the value of y."""
         self.__y = value
-
-
