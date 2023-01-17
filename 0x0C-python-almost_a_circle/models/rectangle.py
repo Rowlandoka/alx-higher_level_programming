@@ -77,6 +77,7 @@ class Rectangle(Base):
                       for times in range(self.height)), end="")
     
     def __str__(self):
-        """Override the to string method"""
-        return "[{}] ({}) {}/({} - {}/{}".format(
-            type(self).__name__, self.id, self.x, self.y, self.width, self.height)
+        """gets rectangle"""
+        return "[{}] ({}) {}/{} - {}/{}".format(
+            type(self).__name__, self.id, self.x, self.y,
+            self.width, self.height)
