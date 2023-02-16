@@ -1,4 +1,5 @@
---lists all the record of the second_table in mysql server
+-- Lists all records of the table second_table.
+-- Records are ordered by descending score.
 SELECT `score`, `name`
 FROM `second_table`
 ORDER BY `score` DESC;
