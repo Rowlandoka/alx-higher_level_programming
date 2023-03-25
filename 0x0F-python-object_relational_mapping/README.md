@@ -1,1 +1,1 @@
-In this project, I learnt and understand how to use SQLAlchemy in place of MySQL to handle database connections and data handling on the backend.
+In this project, I learnt and understand how to use SQLAlchemy in place of MySQL to handle database connections and data handling on the backend. SQLAclchemy objection relational mapping provide a easier way to query databases.
