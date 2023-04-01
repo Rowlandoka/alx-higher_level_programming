@@ -1,22 +1,17 @@
 #!/usr/bin/python3
+"""A script that:
+- takes in a URL,
+- sends a request to the URL
+- displays the body of the response (decoded in utf-8).
 """
-Python scripts that takes a url, sends a request to the URL
-and displays the body of the response (decoded in utf-8).
-"""
-from urllib.request import Request, urlopen
-from urllib.error import URLError, HTTPError
-from sys import argv
-req = Request(argv[1])
+
 
 if __name__ == "__main__":
+    import sys
+    from urllib import request, error
+
     try:
-        response = urlopen(req)
-    except URLError as e:
-        if hasattr(e, 'reason'):
-            print("We failed to reach the server. ")
-            print("Reason: ", e.reason)
-        elif hasattr(e, 'code'):
-            print("The server couldn\t fulfil the request")
-            print("Error code: ", e.code)
-    else:
-        print(response.decode())
+        with request.urlopen(sys.argv[1]) as res:
+            print(res.read().decode('UTF-8'))
+    except error.HTTPError as er:
+        print('Error code:', er.code)
