@@ -6,15 +6,15 @@ request(address, function (error, response, body) {
   if (error) {
     console.log(error);
   } else {
-    const output = {};
-    for (const ct of JSON.parse(body)) {
-      if (ct.completed) {
-        if (output[ct.userId] == undefined) {
-          output[ct.userId] = 0;
+    const results = {};
+    for (const td of JSON.parse(body)) {
+      if (td.completed) {
+        if (results[td.userId] === undefined) {
+          results[td.userId] = 0;
         }
-        output[ct.userId] += 1;
+        results[td.userId] += 1;
       }
     }
-    console.log(output);
+    console.log(results);
   }
 });
